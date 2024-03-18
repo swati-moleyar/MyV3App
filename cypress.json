@@ -1,0 +1,26 @@
+{
+  "video": false,
+  "baseUrl": "http://localhost:3000",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/results/[hash].junit.xml",
+    "toConsole": true,
+    "attachments": true
+  },
+  "env": {
+    "keyvault": {
+      "vault": "hubtests",
+      "user": "demo",
+      "envSuffix": "int"
+    },
+    "auth": {
+      "int": {
+        "username": "TODO_YOUR_TEST_USERNAME",
+        "password": "TODO_YOUR_TEST_USER_PASSWORD",
+        "clientId": "TODO_YOUR_TEST_CLIENT_ID",
+        "clientSecret": "TODO_YOUR_TEST_CLIENT_SECRET",
+        "envSuffix": "int"
+      }
+    }
+  }
+}

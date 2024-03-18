@@ -1,0 +1,16 @@
+# See documentation for reference
+# https://design-system.iqmetrix.net/docs/web-dev-docs/guides/building-and-releasing
+
+# A reference to frontend-packages to access the pipeline template
+resources:
+  repositories:
+    - repository: frontend-packages
+      name: iqmetrix/frontend-packages
+      type: github
+      endpoint: GitHub-iQmetrixService
+
+trigger:
+  - master # The branch to automatically trigger builds when updated
+
+stages:
+  - template: packages/utilities/azure-devops/stages.yml@frontend-packages
