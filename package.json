@@ -9,7 +9,7 @@
     "@iqmetrix/authenticated-fetch": "^1.14.0",
     "@iqmetrix/cypress": "^2.5.3",
     "@iqmetrix/get-environment": "^2.1.0",
-    "@iqmetrix/hub-dev-server": "^2.11.3",
+    "@iqmetrix/hub-dev-server": "2.11.4-alpha.19",
     "@iqmetrix/layout": "^3.0.6",
     "@iqmetrix/redirect-to-shell": "^1.1.0",
     "@iqmetrix/set-title": "^1.0.1",
@@ -52,6 +52,33 @@
     "webpack": "^4.47.0",
     "whatwg-fetch": "^3.6.20"
   },
+  "resolutions": {
+    "loader-utils": "2.0.4",
+    "eslint-plugin-prettier": "^3.1.2",
+    "parse-url": "8.1.0",
+    "git-up": "4.0.5",
+    "launch-editor": "2.6.0",
+    "shell-quote": "1.8.1",
+    "jsprim": "1.4.2",
+    "tar": "6.1.9",
+    "http-cache-semantics": "4.1.1",
+    "scss-tokenizer": "0.4.3",
+    "ansi-regex": "5.0.1",
+    "axios": "0.21.2",
+    "node-forge": "1.3.0",
+    "prismjs": "1.27.0",
+    "trim-newlines": "3.0.1",
+    "ansi-html": "0.0.8",
+    "node-fetch": "2.6.7",
+    "qs": "6.7.3",
+    "is-svg": "4.3.0",
+    "merge": "2.1.1",
+    "dot-prop": "5.3.0",
+    "ejs": "3.1.7",
+    "immer": "9.0.6",
+    "glob-parent": "5.1.2",
+    "async": "2.6.4"
+  },
   "scripts": {
     "start": "hub-dev-server -d start:react",
     "build": "react-scripts build",
@@ -62,7 +89,8 @@
     "dev": "hub-dev-server -d start:react -s react-devtools",
     "start:react": "react-scripts start",
     "test:e2e": "start-server-and-test start http-get://localhost:3000/TODO_APP_NAME cy:run",
-    "test:unit": "react-scripts test --reporters=default --reporters=jest-junit"
+    "test:unit": "react-scripts test --reporters=default --reporters=jest-junit",
+    "dev:preview-shell": "node ./dist/start.js -e production -d start:cra --verbose --preview-shell"
   },
   "eslintConfig": {
     "extends": "react-app"
