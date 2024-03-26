@@ -38,7 +38,7 @@ export const usePosts = (options?: Options) => {
         if (!res.ok) throw res;
         const results = await res.json();
         dispatch({ type: "success", results });
-      } catch (error) {
+      } catch (error:any) {
         dispatch({ type: "error", error });
       }
     };
